@@ -1,0 +1,2 @@
+xhost +;
+docker run -t -i --network host -v /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket  -v /tmp/.X11-unix:/tmp/.X11-unix -v /data/shotcut:/data -e DISPLAY=unix$DISPLAY -v /dev/shm:/dev/shm -v /etc/machine-id:/etc/machine-id -v /run/user/1001/pulse:/run/user/1000/pulse -v /var/lib/dbus:/var/lib/dbus -v ~/.pulse:/home/shotcut/.pulse --device /dev/dri --privileged --name shotcut shotcut 
